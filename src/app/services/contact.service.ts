@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';  // Importa environment
 
 interface ContactData {
   name: string;
@@ -12,7 +13,7 @@ interface ContactData {
   providedIn: 'root',
 })
 export class ContactService {
-  private apiUrl = 'http://127.0.0.1:8000/api/contact';  // Cambia aquí por tu endpoint
+  private apiUrl = `${environment.apiUrl}/contact`;  // Usa la URL del environment
 
   constructor(private http: HttpClient) {}
 
