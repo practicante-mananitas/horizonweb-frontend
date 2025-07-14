@@ -35,7 +35,7 @@ jobs:
           git init
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git remote add origin https://github.com/${{ github.repository }}.git
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git checkout -b build
           git add .
           git commit -m "Deploy build from commit ${{ github.sha }}"
