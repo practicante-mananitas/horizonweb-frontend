@@ -1,0 +1,39 @@
+name: Deploy Angular Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        run: npm run build --configuration production
+
+      - name: Deploy to build branch
+        run: |
+          cd dist
+          app_name=$(ls) # nombre de la carpeta dentro de dist
+          cd $app_name
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git checkout -b build
+          git add .
+          git commit -m "Deploy build from commit ${{ github.sha }}"
+          git push --force origin build
