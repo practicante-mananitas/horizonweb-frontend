@@ -1,0 +1,142 @@
+.about-us {
+  background-color: #ffffff;  // fondo blanco
+  color: #0e1a2b;             // texto azul oscuro para contraste
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    color: #FFA500; // naranja HorizonWebMX
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Valores y equipo como listas bien legibles
+  .about-values,
+  .about-team {
+    margin-top: 2.5rem;
+    text-align: left;
+
+    h3 {
+      font-size: 1.75rem;
+      color: #0e1a2b;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      border-left: 4px solid #FFA500;
+      padding-left: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      list-style: disc inside;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+
+      li {
+        margin-bottom: 0.7rem;
+
+        strong {
+          color: #0e1a2b;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // Llamado a la acción
+  .about-cta {
+    margin-top: 3rem;
+    background-color: #fff7e6;
+    border: 1px solid #ffb84d;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 1.75rem;
+      color: #ff7f00;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 0;
+
+      a.btn-primary {
+        display: inline-block;
+        background-color: #ff7f00;
+        color: white;
+        text-decoration: none;
+        padding: 0.7rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e66b00;
+        }
+      }
+    }
+  }
+
+  // Responsividad
+  @media (max-width: 600px) {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p,
+    .about-values ul,
+    .about-team ul,
+    .about-cta p {
+      font-size: 1rem;
+    }
+
+    .about-values,
+    .about-team,
+    .about-cta {
+      text-align: center;
+
+      ul {
+        list-style-position: inside;
+        padding-left: 0;
+      }
+    }
+
+    .about-cta p a.btn-primary {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="home-container" id="home">
+  <div class="content">
+    <h1>Agencia de Desarrollo Web</h1>
+    <h2><span class="highlight">HorizonWebMX</span></h2>
+    <p>Tu agencia de desarrollo web con tecnología de punta.</p>
+    <div class="buttons">
+    <button (click)="scrollToServices()" class="animated-button btn-primary">
+        <svg viewBox="0 0 24 24" class="arr-2">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+        <span class="text">Conoce nuestros servicios</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+    </button>
+
+    <button (click)="scrollToContact()" class="animated-button btn-secondary">
+        <svg viewBox="0 0 24 24" class="arr-2">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+        <span class="text">Contáctanos</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+    </button>
+    </div>
+
+  </div>
+  <div class="image-container">
+    <img src="assets/logo-sin-fondo.png" alt="HorizonWebMX Logo" />
+  </div>
+</div>
+
+<app-about-us></app-about-us>
+<app-services id="services"></app-services>
+<app-portafolio></app-portafolio>
+<app-contact></app-contact>
+<app-footer></app-footer>

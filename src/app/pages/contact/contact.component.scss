@@ -1,0 +1,226 @@
+.contact-section {
+  background: #fff;
+  padding: 4.5rem 3rem;
+  max-width: 680px;
+  margin: 3rem auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #ff7f00;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: #666;
+    line-height: 1.5;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+        color: #444;
+        font-size: 1rem;
+        user-select: none;
+      }
+
+      input,
+      textarea {
+        padding: 0.85rem 1.25rem;
+        border: 1.5px solid #ddd;
+        border-radius: 12px;
+        font-size: 1.05rem;
+        font-family: inherit;
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        resize: vertical;
+        min-height: 42px;
+
+        &:focus {
+          border-color: #ff7f00;
+          outline: none;
+          box-shadow: 0 0 12px rgba(255, 127, 0, 0.35);
+          background-color: #fff9f1;
+        }
+
+        &::placeholder {
+          color: #bbb;
+          font-style: italic;
+        }
+      }
+
+      textarea {
+        min-height: 110px;
+      }
+
+      .error {
+        color: #e63946;
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        font-weight: 600;
+      }
+    }
+
+    button {
+      background-color: #ff7f00;
+      color: #fff;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      align-self: center;
+      box-shadow: 0 6px 18px rgba(255, 127, 0, 0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      user-select: none;
+
+      &:hover:not(:disabled) {
+        background-color: #e66b00;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(230, 107, 0, 0.6);
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+        box-shadow: 0 5px 14px rgba(204, 80, 0, 0.5);
+      }
+
+      &:disabled {
+        background-color: #f5b37d;
+        cursor: not-allowed;
+        box-shadow: none;
+        color: #fff8f0;
+      }
+
+      &:focus-visible {
+        outline: 3px solid #ffe1a1;
+        outline-offset: 4px;
+      }
+    }
+
+    .success {
+      color: #2a9d8f;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .error {
+      color: #e63946;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+    .contact-wrapper {
+    background-color: #eeeeee;
+    padding: 2rem 0;
+    }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1.5rem;
+    max-width: 90%;
+    margin: 2rem auto;
+
+    h2 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      gap: 1.5rem;
+
+      .form-group {
+        label {
+          font-size: 0.95rem;
+        }
+
+        input,
+        textarea {
+          font-size: 1rem;
+          padding: 0.75rem 1rem;
+        }
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 2.5rem 1rem;
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      gap: 1.25rem;
+
+      .form-group {
+        label {
+          font-size: 0.9rem;
+        }
+
+        input,
+        textarea {
+          font-size: 0.95rem;
+          padding: 0.7rem 0.9rem;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.85rem;
+      }
+    }
+  }
+}
